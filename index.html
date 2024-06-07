@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Ganesh's Photography</h1>
+        <p>Capturing Moments One Click at a Time</p>
+        <a href="#gallery">View My Work</a>
+    </header>
+    <section id="about">
+        <h2>About Photography</h2>
+        <p>Photography is the art, application, and practice of creating durable images by recording light or other electromagnetic radiation. It has the power to capture memories, tell stories, and communicate emotions.
+            One key reason is that it allows us to document our lives and the world around us. Through photos, we can relive past experiences, remember loved ones, and share our stories. Photography also serves as a powerful visual medium, enabling us to express our creativity and make a lasting impression on our audience.
+        </p>
+    </section>
+    <section id="importance" class="section-alt">
+        <h2>Importance of Photography</h2>
+        <p>Photography plays a crucial role in preserving moments that are meaningful to us. It helps document historical events, celebrate milestones, and express our creativity. Through photographs, we can explore the world from different perspectives and connect with others on a deeper level.</p>
+    </section>
+    <section id="gallery" class="section-alt">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="bird.jpg" alt="Sample Photo 1">
+            <img src="sky.jpg" alt="Sample Photo 2">
+            <img src="squirrel.jpeg" alt="Sample Photo 3">
+            <img src="sunrise.jpeg" alt="Sample Photo 4">
+            <img src="sunset.jpeg" alt="Sample Photo 5">
+            <img src="mom.webp" alt="Sample Photo 6">
+            <img src="girl.jpg" alt="Sample Photo 7">
+            <img src="wedding.jpeg" alt="Sample Photo 8">
+            <img src="birthday.jpg" alt="Sample Photo 9">
+            <img src="knot.jpg" alt="Sample Photo 10">
+            <img src="fam.jpg" alt="Sample Photo 11">
+            <img src="gatherings.webp" alt="Sample Photo 12">
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Book Appointment</h2>
+        <form id="appointmentForm" onsubmit="handleFormSubmit(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="date">Appointment Date:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="time">Appointment Time:</label>
+            <input type="time" id="time" name="time" required>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="successMessage" style="display:none; color: green; margin-top: 20px;">
+            Appointment booked successfully!
+        </div>
+    </section>
+    <footer>
+        <p>Follow me on social media:</p>
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="https://www.instagram.com/?hl=en%22"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://x.com/?lang=en-in"><i class="fab fa-twitter"></i> Twitter</a>
+    </footer>
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            document.getElementById('successMessage').style.display = 'block';
+            document.getElementById('appointmentForm').reset();
+        }
+    </script>
+</body>
+</html>
